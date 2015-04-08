@@ -45,13 +45,16 @@ public class ShapesActivity extends Activity {
             Paint paint = new Paint();
             paint.setColor(Color.BLUE);
 
+
+
+
             canvas.drawRect(100, 200, 150, 250, paint );
 
 
             Path path = new Path();
             path.moveTo(10, 300);
             path.lineTo(10, 400);
-            path.lineTo(100, 400);
+            path.lineTo(canvas.getWidth(), 400);
             path.close();
 
             canvas.drawPath(path, paint);
