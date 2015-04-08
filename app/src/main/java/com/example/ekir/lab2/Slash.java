@@ -23,7 +23,7 @@ public class Slash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int k = 500;
+        const int wait_time = 2000;
         setContentView(R.layout.activity_slash);
 
         Handler handler = new Handler();
@@ -38,6 +38,6 @@ public class Slash extends Activity {
                 Slash.this.startActivity(intent);
             }
 
-        }, k);
+        }, wait_time);
     }
 }
