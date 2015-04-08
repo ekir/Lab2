@@ -46,8 +46,8 @@ public class DrawCirclesActivity extends Activity {
             canvas.drawColor(Color.GREEN);
             Paint paint = new Paint();
             Random rand = new Random();
-            int screen_width=800;
-            int screen_height=800;
+            int screen_width=canvas.getWidth();
+            int screen_height=canvas.getHeight();
             for(int i=0;i<50;i++) {
                 paint.setColor(Color.rgb(rand.nextInt(255),rand.nextInt(255),rand.nextInt(255)));
                 canvas.drawCircle(rand.nextInt(screen_width), rand.nextInt(screen_height), 50, paint);
