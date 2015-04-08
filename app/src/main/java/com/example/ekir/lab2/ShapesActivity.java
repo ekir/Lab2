@@ -8,6 +8,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,7 +44,17 @@ public class ShapesActivity extends Activity {
 
             Paint paint = new Paint();
             paint.setColor(Color.BLUE);
-            canvas.drawCircle(100,100,50,paint);
+
+            canvas.drawRect(100, 200, 150, 250, paint );
+
+
+            Path path = new Path();
+            path.moveTo(10, 300);
+            path.lineTo(10, 400);
+            path.lineTo(100, 400);
+            path.close();
+
+            canvas.drawPath(path, paint);
         }
     }
 }

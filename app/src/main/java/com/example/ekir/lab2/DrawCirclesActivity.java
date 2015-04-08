@@ -16,6 +16,8 @@ import android.view.View;
 
 import com.example.ekir.lab2.R;
 
+import java.util.Random;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -42,10 +44,14 @@ public class DrawCirclesActivity extends Activity {
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
             canvas.drawColor(Color.GREEN);
-
             Paint paint = new Paint();
-            paint.setColor(Color.BLACK);
-            canvas.drawCircle(100,100,50,paint);
+            Random rand = new Random();
+            int screen_width=800;
+            int screen_height=800;
+            for(int i=0;i<50;i++) {
+                paint.setColor(Color.rgb(rand.nextInt(255),rand.nextInt(255),rand.nextInt(255)));
+                canvas.drawCircle(rand.nextInt(screen_width), rand.nextInt(screen_height), 50, paint);
+            }
         }
     }
 }
