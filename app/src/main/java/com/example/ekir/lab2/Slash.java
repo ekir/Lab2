@@ -23,7 +23,7 @@ public class Slash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        int k = 3;
         setContentView(R.layout.activity_slash);
 
         Handler handler = new Handler();
