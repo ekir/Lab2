@@ -5,6 +5,9 @@ import com.example.ekir.lab2.util.util.SystemUiHider;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -16,6 +19,8 @@ import android.view.View;
 
 import com.example.ekir.lab2.R;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Random;
 
 /**
